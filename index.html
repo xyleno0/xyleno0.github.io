@@ -50,10 +50,23 @@
     </script>
 
     <script>
-
-    document.getElementById('audios').play();
-
     (function(){
+    	var music = document.getElementById('audios');
+	  	var state = 0;
+     	document.addEventListener('touchstart', function(){    
+          if(state==0){        
+              music.play();        
+              state=1;    
+          }
+     	 }, false);
+     	 document.addEventListener("WeixinJSBridgeReady", function () {    
+          music.play();
+     	 }, false);
+     	 //循环播放
+     	 music.onended = function () {    
+         	 music.load();    
+         	 music.play();
+     	 }
         var canvas = $('#canvas');
 		
         if (!canvas[0].getContext) {
