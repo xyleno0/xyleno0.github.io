@@ -18,7 +18,7 @@
         </style>
 </head>
     <body>
-			<audio autoplay="autopaly" loop="loop" controls="controls" >
+			<audio autoplay="autopaly" loop="loop" id="audios">
 					<source src="renxi.mp3" type="audio/mp3" loop='-1'/>
 			</audio>  
 
@@ -50,6 +50,9 @@
     </script>
 
     <script>
+
+    document.getElementById('audios').play();
+
     (function(){
         var canvas = $('#canvas');
 		
