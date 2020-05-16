@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
 	    <style type="text/css">
 <!--
-.STYLE1 {color: #666666}
+.STYLE1 {color: #808080 }
 -->
         </style>
 </head>
@@ -25,25 +25,23 @@
              <div id="wrap">
                 <div id="text">
 			        <div id="code">
-			      <font color="#FF0000">  	
-						<span class="say">曾经,有一份真诚的爱情放在我面前，</span><br>
-						<span class="say">我没有珍惜，等我失去的时候我才后悔莫及，</span><br>
-						<span class="say">人世间最痛苦的事莫过于此。</span><br>
-						<span class="say">如果上天能够给我一个再来一次的机会,</span><br>
-						<span class="say">我会对那个女孩子说三个字：</span><br>
-						<span class="say"><span class="space"></span>———— 我爱你!</span><br>
-						<span class="say"></span><br>
-						<span class="say">如果非要在这份爱上加上一个期限，我希望是……</span><br>
-						<span class="say"><span class="space"></span>———— 一万年！</span>
+			      <font color="#EE82EE" size="5" font-family="Microsoft Yahei" >  	
+						<span class="say" color="#800080">亲爱的杨雯雯:</span><br><br>
+						<span class="say">&#8195;今天的</span><br><br>
+						<span class="say">&#8195;&#8195;刘欣欣</span><br><br>
+						<span class="say">&#8195;&#8195;&#8195;也很想你</span><br><br>
+						<span class="say">❤mua❤mua❤mua❤</span><br><br>
+						<span class="say">&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;2020.5.20</span>
+
 			  </font></p>
       </div>
                 </div>
                 <div id="clock-box">
-                    <span class="STYLE1"></span><font color="#33CC00">我喜欢你</font>
-<span class="STYLE1">已经是……</span>
+                    <span class="STYLE1"></span><font color="#FF69B4" size="6">雯雯</font>
+<span class="STYLE1"><font  size="4.5">自从我们在一起，已经是……</font></span>
                   <div id="clock"></div>
               </div>
-                <canvas id="canvas" width="1100" height="660"></canvas>
+                <canvas id="canvas" width="1100" height="760"></canvas>
             </div>
             
         </div>
@@ -146,7 +144,7 @@
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.flower(2);
+    	        tree.flower(5);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
@@ -159,8 +157,6 @@
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
-
-            // 会有闪烁不得意这样做, (＞﹏＜)
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
             canvas.css("background", "#ffe");
             $await(Jscex.Async.sleep(300));
@@ -179,7 +175,7 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
 		    var together = new Date();
-		    together.setFullYear(2019,10,3); 			//时间年月日
+		    together.setFullYear(2019,9,3); 			//时间年月日
 		    together.setHours(13);						//小时	
 		    together.setMinutes(00);					//分钟
 		    together.setSeconds(0);					//秒前一位
