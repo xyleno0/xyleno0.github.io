@@ -18,7 +18,7 @@
         </style>
 </head>
     <body>
-			<audio autoplay="autopaly">
+			<audio autoplay="autopaly" loop="loop" controls="controls" >
 					<source src="renxi.mp3" type="audio/mp3" loop='-1'/>
 			</audio>  
 
@@ -144,7 +144,7 @@
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.flower(5);
+    	        tree.flower(2);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
