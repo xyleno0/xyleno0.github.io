@@ -18,9 +18,7 @@
         </style>
 </head>
     <body>
-			<audio loop="loop" id="audios">
-					<source src="renxi.mp3" type="audio/mp3" loop='-1'/>
-			</audio>  
+			<audio style="display:none; height: 0" id="bg-music" preload="auto"src="renxi.mp3"loop='loop'></audio>  
 
              <div id="wrap">
                 <div id="text">
@@ -32,13 +30,14 @@
 						<span class="say">&#8195;&#8195;&#8195;也很想你</span><br><br>
 						<span class="say">❤mua❤mua❤mua❤</span><br><br>
 						<span class="say">&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;2020.5.20</span>
+						<span class="say">&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;爱你的欣欣</span>
 
 			  </font></p>
       </div>
                 </div>
                 <div id="clock-box">
                     <span class="STYLE1"></span><font color="#FF69B4" size="6">雯雯</font>
-<span class="STYLE1"><font  size="4.5">自从我们在一起，已经是……</font></span>
+<span class="STYLE1"><font  size="4.5">自从我们在一起，已经过了……</font></span>
                   <div id="clock"></div>
               </div>
                 <canvas id="canvas" width="1100" height="760"></canvas>
@@ -50,13 +49,12 @@
     </script>
 
     <script>
-
-    	$(document).ready(function(){
+    	 $(document).ready(function(){
             autoPlayMusic();
             audioAutoPlay();
         });
         function audioAutoPlay() {
-            var audio = document.getElementById('audios');
+            var audio = document.getElementById('bg-music');
             audio.play();
             document.addEventListener("WeixinJSBridgeReady", function () {
                 audio.play();
@@ -89,10 +87,11 @@
                 media.pause();
             }
         }
-
+    	
     (function(){
     	
-        var canvas = $('#canvas');	
+        var canvas = $('#canvas');
+		
         if (!canvas[0].getContext) {
             $("#error").show();
             return false;        }
